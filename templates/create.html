@@ -1,0 +1,112 @@
+{% extends 'master.html' %}
+
+
+{% block title %} Create Student  {% endblock %}
+
+
+{% block body %}
+
+
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Dropdown
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+          
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+     <div class="container">
+        <form method="post" action="/">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <td> First Name</td>
+                        <td> <input type="text" name="first_name" class="form"> </td>
+                    </tr>
+
+                    <tr>
+                        <td>Last Name</td>
+                        <td><input type = "text" name = "last_name" class="form-control" /></td>
+                    </tr>
+                
+                    <tr>
+                        <td>Email</td>
+                        <td><input type = "email" name = "email" class="form-control" /></td>
+                    </tr>
+                
+                    <tr>
+                        <td>Password</td>
+                        <td><input type = "password" name = "password" class="form-control" /></td>
+                    </tr>
+                
+                    <tr>
+                        <td>Gender</td>
+                        <td>
+                        Male: <input type = "radio" name = "gender"  value="male"/>
+                         Female: <input type = "radio" name = "gender"  value="female"/>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td>Hobbies</td>
+                        <td>
+                            Cricket : <input type="checkbox" name="hobbies"  value="cricket">
+                            Movies : <input type="checkbox"  name="hobbies"  value="cricket">
+                            TV : <input type="checkbox"  name="hobbies"  value="tv">
+                
+                        </td>
+                    </tr>
+                
+                
+                
+                    <tr>
+                        <td>Country</td>
+                        <td>
+                        <select name="country" class="form-control">
+                            <option value="india">India</option>
+                            <option value="usa">USA</option>
+                            <option value="australia">Australia</option>
+                         </select>
+                        </td>
+                    </tr>
+                    
+                
+                    <tr>
+                        <td colspan="2">
+                            <input type="submit" name="submit" value="submit" class="btn btn-warning">
+                        </td>
+                       
+                    </tr>
+                </thead>
+            </table>
+        </form>
+    </div>
+
+{% endblock %}
